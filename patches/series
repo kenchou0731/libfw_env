@@ -1,0 +1,3 @@
+0001-Set-default-environment-variables-to-empty.patch
+0002-Remove-unneed-header-includes.patch
+0003-Define-CONFIG_FILE-etc-fw_env_config.patch

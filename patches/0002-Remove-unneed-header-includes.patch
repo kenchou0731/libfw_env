@@ -1,0 +1,50 @@
+From 1cb23789851590307d663db80f2b8b806ba3dbd9 Mon Sep 17 00:00:00 2001
+From: Ken CJ Chou <kenchou0731@gmail.com>
+Date: Wed, 3 Jun 2020 09:25:46 +0000
+Subject: [PATCH 2/3] Remove unneed header includes
+
+---
+ include/fw_env.h | 1 -
+ lib/env_flags.c  | 1 -
+ lib/fw_env.c     | 1 -
+ 3 files changed, 3 deletions(-)
+
+diff --git a/include/fw_env.h b/include/fw_env.h
+index b60fbfc..78c803c 100644
+--- a/include/fw_env.h
++++ b/include/fw_env.h
+@@ -4,7 +4,6 @@
+  * Wolfgang Denk, DENX Software Engineering, wd@denx.de.
+  */
+ 
+-#include <env.h>
+ #include <stdint.h>
+ 
+ /*
+diff --git a/lib/env_flags.c b/lib/env_flags.c
+index 418d6cc..f390112 100644
+--- a/lib/env_flags.c
++++ b/lib/env_flags.c
+@@ -11,7 +11,6 @@
+ #ifdef USE_HOSTCC /* Eliminate "ANSI does not permit..." warnings */
+ #include <stdint.h>
+ #include <stdio.h>
+-#include "fw_env_private.h"
+ #include "fw_env.h"
+ #include <env_attr.h>
+ #include <env_flags.h>
+diff --git a/lib/fw_env.c b/lib/fw_env.c
+index cb072ce..77c1f39 100644
+--- a/lib/fw_env.c
++++ b/lib/fw_env.c
+@@ -39,7 +39,6 @@
+ 
+ #include <mtd/ubi-user.h>
+ 
+-#include "fw_env_private.h"
+ #include "fw_env.h"
+ 
+ struct env_opts default_opts = {
+-- 
+2.20.1
+
